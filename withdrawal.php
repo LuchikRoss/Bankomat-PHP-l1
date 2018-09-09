@@ -1,14 +1,20 @@
 <?php
     //header('Refresh: 3; URL=index.html');
 
-    error_page  405 = 200 $uri;
+//    <script>
+//        var answer = document.getElementById('answer');
+//        function getInput(inputId) {
+//            var element = document.getElementById(inputId);
+//            answer.innerText = element.value;
+//        }
+//    </script>
 
-    $amountWithdraw5000 = filter_input(INPUT_POST, 'amountWithdrawal') ? filter_input(INPUT_POST, 'amountWithdrawal') : 0;
+    $amountWithdraw5000 = filter_input(INPUT_GET, 'amountWithdrawal') ? filter_input(INPUT_GET, 'amountWithdrawal') : 0;
 
-    $noteStart5000 = filter_input(INPUT_POST, 'noteStart5000') ? filter_input(INPUT_POST, 'noteStart5000') : 0;
-    $noteStart1000 = filter_input(INPUT_POST, 'noteStart1000') ? filter_input(INPUT_POST, 'noteStart1000') : 0;
-    $noteStart500 = filter_input(INPUT_POST, 'noteStart500') ? filter_input(INPUT_POST, 'noteStart500') : 0;
-    $noteStart100 = filter_input(INPUT_POST, 'noteStart100') ? filter_input(INPUT_POST, 'noteStart100') : 0;
+    $noteStart5000 = filter_input(INPUT_GET, 'noteStart5000') ? filter_input(INPUT_GET, 'noteStart5000') : 0;
+    $noteStart1000 = filter_input(INPUT_GET, 'noteStart1000') ? filter_input(INPUT_GET, 'noteStart1000') : 0;
+    $noteStart500 = filter_input(INPUT_GET, 'noteStart500') ? filter_input(INPUT_GET, 'noteStart500') : 0;
+    $noteStart100 = filter_input(INPUT_GET, 'noteStart100') ? filter_input(INPUT_GET, 'noteStart100') : 0;
 
     $bills = array (
         1 => $noteStart5000, //5000
