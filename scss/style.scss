@@ -1,0 +1,78 @@
+h1{
+  text-align: center;
+}
+.sectionBank{
+  height: 341px;
+  width: 100%;
+  background: #999999;
+  display: flex;
+  justify-content: center;
+  .bankomat {
+    margin-top: 39px;
+    background-image: url("../img/banko.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 320px;
+    height: 401px;
+    h3{
+      text-align: center;
+      margin-top: -30px;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+  &__service{
+    position: absolute;
+    top: 373px;
+    text-align: center;
+    color: #dcff00;
+    text-transform: uppercase;
+  }
+}
+
+.sectionBills{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .wrapperForm{
+    .wrapperNotes {
+      float: left;
+      width: 95px;
+      text-align: right;
+      h3 {
+        text-align: center;
+      }
+      .note {
+        width: 38px;
+        text-align: center;
+      }
+    }
+    .wrapperWithdrawal {
+      float: left;
+      text-align: center;
+      width: 130px;
+      padding-left: 10px;
+      .withdrawal {
+        text-align: center;
+        width: 70px;
+      }
+    }
+    .wrapperCash{
+      padding-left: 10px;
+      float: left;
+      width: 95px;
+      text-align: left;
+      h3{
+        text-align: center;
+      }
+      .note{
+        width: 38px;
+        margin-top: 3px;
+        text-align: center;
+        border: none;
+        display: none;
+      }
+    }
+  }
+}
+

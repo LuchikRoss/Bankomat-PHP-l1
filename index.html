@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bankomat</title>
+</head>
+<body>
+    <h1>Cash machine</h1>
+    <div class="sectionBank">
+        <div class="bankomat">
+            <h3>Amount:
+                <?php
+                    if (isset($amountBillsTotal)){
+                    echo $amountBillsTotal;
+                    }
+                ?>
+            </h3>
+        </div>
+        <h3 class="sectionBank__service">
+            <?php
+                    if (isset($serviceMessage)){
+                    echo $serviceMessage;
+                    }
+                ?>
+        </h3>
+    </div>
+    <div class="sectionBills">
+        <form action="withdrawal.php" method="post" class="wrapperForm">
+            <div class="wrapperNotes">
+                <h3>Notes</h3>
+                <h4>5000 x <input class="note" type="number" pattern="[0-9]{,3}" placeholder="0" min="0" name="noteStart5000"></h4>
+                <h4>1000 x <input class="note" type="number" pattern="[0-9]{,3}" placeholder="0" min="0" name="noteStart1000"></h4>
+                <h4>500 x <input class="note" type="number" pattern="[0-9]{,3}" placeholder="0" min="0" name="noteStart500"></h4>
+                <h4>100 x <input class="note" type="number" pattern="[0-9]{,3}" placeholder="0" min="0" name="noteStart100"></h4>
+            </div>
+            <div class="wrapperWithdrawal">
+                    <fieldset>
+                        <legend><h3>Withdrawal</h3></legend>
+                        <h4><input name="amountWithdrawal" class="withdrawal" type="number" max="100000" min="100" size="6" step="100" pattern="[0-9]{,5}" required placeholder="0"></h4>
+                        <h4><input class="withdrawal" type="submit" value="Get"></h4>
+                    </fieldset>
+            </div>
+            <div class="wrapperCash">
+                <h3>Cash</h3>
+                <h4><input class="note" value="<?php echo $amountBills5000; ?>" type="text" placeholder="0" name="noteFinish5000" disabled> x 5000</h4>
+                <h4><input class="note" value="<?php echo $amountBills1000; ?>" type="text" placeholder="0" name="noteFinish1000" disabled> x 1000</h4>
+                <h4><input class="note" value="<?php echo $amountBills500; ?>" type="text" placeholder="0" name="noteFinish500" disabled> x 500</h4>
+                <h4><input class="note" value="<?php echo $amountBills100; ?>" type="text" placeholder="0" name="noteFinish100" disabled> x 100</h4>
+            </div>
+        </form>
+    </div>
+    <script>
+        if (document.getElementsByName("noteFinish5000")[0].value > 0){document.getElementsByName("noteFinish5000")[0].style.display = "inline-block";}
+        if (document.getElementsByName("noteFinish1000")[0].value > 0){document.getElementsByName("noteFinish1000")[0].style.display = "inline-block";}
+        if (document.getElementsByName("noteFinish500")[0].value > 0){document.getElementsByName("noteFinish500")[0].style.display = "inline-block";}
+        if (document.getElementsByName("noteFinish100")[0].value > 0){document.getElementsByName("noteFinish100")[0].style.display = "inline-block";}
+        console.log(document.getElementsByName("noteFinish5000")[0].value);
+    </script>
+</body>
+</html>
