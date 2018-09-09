@@ -1,13 +1,7 @@
 <?php
     //header('Refresh: 3; URL=index.html');
 
-//    <script>
-//        var answer = document.getElementById('answer');
-//        function getInput(inputId) {
-//            var element = document.getElementById(inputId);
-//            answer.innerText = element.value;
-//        }
-//    </script>
+    error_page  405 = 200 $uri;
 
     $amountWithdraw5000 = filter_input(INPUT_POST, 'amountWithdrawal') ? filter_input(INPUT_POST, 'amountWithdrawal') : 0;
 
