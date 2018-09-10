@@ -1,14 +1,6 @@
 <?php
     //header('Refresh: 3; URL=index.html');
 
-//    <script>
-//        var answer = document.getElementById('answer');
-//        function getInput(inputId) {
-//            var element = document.getElementById(inputId);
-//            answer.innerText = element.value;
-//        }
-//    </script>
-
     $amountWithdraw5000 = filter_input(INPUT_POST, 'amountWithdrawal') ? filter_input(INPUT_POST, 'amountWithdrawal') : 0;
 
     $noteStart5000 = filter_input(INPUT_POST, 'noteStart5000') ? filter_input(INPUT_POST, 'noteStart5000') : 0;
